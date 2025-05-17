@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>استشاريون الجمعية - Zairat Prototype</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      direction: rtl;
+    }
+    header, footer {
+      background: #6b4c9a;
+      color: white;
+      padding: 1rem;
+    }
+    h1 {
+      margin: 1rem 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      color: #6b4c9a;
+    }
+    .card p {
+      margin: 0.5rem 0 1rem;
+    }
+    .card button {
+      background: #bbb;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>استشاريون جمعية زائرات</h1>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <h2>استشاري قانوني</h2>
+        <p>للاستشارات القانونية والتنظيمية</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+      <div class="card">
+        <h2>استشاري علاقات عامة</h2>
+        <p>لصياغة الردود والخطابات الإعلامية</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+      <div class="card">
+        <h2>استشاري المدير التنفيذي</h2>
+        <p>لتحليل وإدارة القرارات العليا</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+      <div class="card">
+        <h2>استشاري إعلامي</h2>
+        <p>للمحتوى والنشر الإعلامي</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+      <div class="card">
+        <h2>استشاري مالي</h2>
+        <p>لمراجعة التكاليف والميزانية</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+      <div class="card">
+        <h2>استشاري مشاريع</h2>
+        <p>لتقييم المشاريع المقترحة</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+      <div class="card">
+        <h2>استشاري تقني</h2>
+        <p>للدعم التقني وتحسين الأنظمة</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+      <div class="card">
+        <h2>استشاري ذكاء اصطناعي</h2>
+        <p>لتطوير أدوات المساعدة الذكية</p>
+        <button disabled>فتح المستشار</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© جمعية زائرات 2025 - نسخة تجريبية للعرض فقط</p>
+  </footer>
+</body>
+</html>
