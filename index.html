@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>جمعية زائرات - الصفحة الرئيسية</title>
+  <title>جمعية زائرات - الرئيسية</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f7f6f9;
+      background: #f4f3f9;
       color: #333;
-      direction: rtl;
     }
     header {
-      background: #5a3e84;
+      background: #4a3271;
       color: white;
-      padding: 2rem;
+      padding: 1.5rem;
       text-align: center;
     }
     header h1 {
@@ -23,62 +22,135 @@
       font-size: 2rem;
     }
     nav {
+      background: #e2d8f1;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 1rem;
-      background: #eae6f3;
       padding: 1rem;
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
-      color: #5a3e84;
-      background: white;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
-      border: 1px solid #d3cbe6;
+      color: #4a3271;
       font-weight: bold;
-      transition: all 0.2s ease-in-out;
+      background: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #d2c3e6;
     }
     nav a:hover {
-      background: #5a3e84;
+      background: #4a3271;
       color: white;
     }
     main {
-      max-width: 800px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      max-width: 1200px;
       margin: auto;
+      gap: 2rem;
       padding: 2rem;
+    }
+    .news-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .news-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .news-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .news-card-content {
+      padding: 1rem;
+    }
+    .news-card-content h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+      color: #4a3271;
+    }
+    .news-card-content p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .sidebar {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .sidebar h2 {
+      color: #4a3271;
+      margin-bottom: 1rem;
+    }
+    .sidebar p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .cta {
+      display: block;
       text-align: center;
+      margin-top: 1.5rem;
+      padding: 0.7rem;
+      background: #4a3271;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
     footer {
-      background: #5a3e84;
+      background: #4a3271;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>جمعية زائرات</h1>
-    <p>التمكين، الشراكة، المسؤولية</p>
+    <p>واجهة إعلامية تمثل رسالتنا المجتمعية</p>
   </header>
   <nav>
-    <a href="about.html">من نحن</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">عن الجمعية</a>
     <a href="goals.html">الأهداف</a>
-    <a href="donate.html">نموذج التبرع</a>
+    <a href="donate.html">تبرع</a>
     <a href="news.html">الأخبار</a>
     <a href="consultants.html">الاستشاريون</a>
     <a href="contact.html">اتصل بنا</a>
   </nav>
   <main>
-    <h2>مرحبًا بكم في الموقع التجريبي لجمعية زائرات</h2>
-    <p>
-      هذا النموذج يهدف إلى عرض تجربة أولية لتصميم وهوية الموقع الرسمي للجمعية. نسعى من خلاله إلى تقديم تجربة مهنية وراقية تعكس أهداف الجمعية ورسالتها.
-    </p>
+    <section class="news-section">
+      <div class="news-card">
+        <img src="https://via.placeholder.com/400x200.png?text=خبر+1" alt="خبر 1">
+        <div class="news-card-content">
+          <h3>إطلاق مبادرة تمكين المرأة 2025</h3>
+          <p>مبادرة جديدة تدعم سيدات المجتمع عبر برامج تدريب وتأهيل.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="https://via.placeholder.com/400x200.png?text=خبر+2" alt="خبر 2">
+        <div class="news-card-content">
+          <h3>تقرير أداء النصف الأول</h3>
+          <p>إصدار شامل يعرض إنجازات الجمعية في النصف الأول من العام.</p>
+        </div>
+      </div>
+    </section>
+    <aside class="sidebar">
+      <h2>من نحن؟</h2>
+      <p>جمعية نسائية خيرية مرخصة تسعى إلى تمكين المرأة والمشاركة في التنمية المجتمعية بالشراكة مع القطاعات الحكومية والخاصة.</p>
+      <a class="cta" href="donate.html">ساهم معنا الآن</a>
+    </aside>
   </main>
   <footer>
-    <p>© جمعية زائرات 2025 - نسخة تجريبية للعرض الإداري</p>
+    <p>© جمعية زائرات 2025 - جميع الحقوق محفوظة</p>
   </footer>
 </body>
 </html>
