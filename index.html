@@ -1,188 +1,114 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>جمعية زائرات - الرئيسية</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind Config: Cairo Font -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif']
+          },
+          colors: {
+            primary: '#0f766e', // أخضر زمردي أنيق
+            accent: '#f59e0b',  // برتقالي ذهبي
+            dark: '#1f2937',    // رمادي داكن
+          },
+          animation: {
+            scroll: 'scroll 20s linear infinite'
+          },
+          keyframes: {
+            scroll: {
+              '0%': { transform: 'translateX(100%)' },
+              '100%': { transform: 'translateX(-100%)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f4f3f9;
-      color: #333;
-    }
-    .ticker {
-      background: #f3eaff;
-      padding: 0.7rem 1rem;
-      color: #4a3271;
-      font-weight: bold;
-      overflow: hidden;
-      position: relative;
-    }
-    .ticker span {
-      display: inline-block;
-      white-space: nowrap;
-      animation: scroll 18s linear infinite;
-    }
-    .ticker a {
-      color: #4a3271;
-      text-decoration: none;
-      margin-left: 2rem;
-    }
-    .ticker a:hover {
-      text-decoration: underline;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-    header {
-      background: #4a3271;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      background: #e2d8f1;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      text-decoration: none;
-      color: #4a3271;
-      font-weight: bold;
-      margin: 0 0.5rem;
-      transition: color 0.3s, border-bottom 0.3s;
-    }
-    nav a:not(:last-child)::after {
-      content: '|';
-      margin-right: 0.7rem;
-      color: #999;
-    }
-    nav a:hover {
-      color: #2d1b45;
-      border-bottom: 2px solid #4a3271;
-    }
-    main {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      max-width: 1200px;
-      margin: auto;
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .news-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    .news-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .news-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-    .news-card-content {
-      padding: 1rem;
-    }
-    .news-card-content h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.1rem;
-      color: #4a3271;
-    }
-    .news-card-content p {
-      font-size: 0.95rem;
-      color: #444;
-    }
-    .sidebar {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .sidebar h2 {
-      color: #4a3271;
-      margin-bottom: 1rem;
-    }
-    .sidebar p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    .cta {
-      display: block;
-      text-align: center;
-      margin-top: 1.5rem;
-      padding: 0.7rem;
-      background: #4a3271;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      background: linear-gradient(to left, #4a3271, #3a285a);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      box-shadow: 0 -3px 6px rgba(0,0,0,0.05);
+      font-family: 'Cairo', sans-serif;
     }
   </style>
 </head>
-<body>
-  <div class="ticker">
-    <span>
-      <a href="news.html">📢 انضموا إلينا في مبادرة تمكين المرأة 2025</a>
-      <a href="news.html">🎉 توقيع شراكة جديدة لدعم التدريب المجتمعي</a>
-      <a href="news.html">📰 إصدار تقرير أداء الجمعية للنصف الأول من العام</a>
-    </span>
+<body class="bg-gray-50 text-dark font-cairo">
+
+  <!-- Ticker -->
+  <div class="bg-orange-50 overflow-hidden py-3 px-4 border-b border-orange-200">
+    <div class="whitespace-nowrap animate-scroll text-sm text-primary font-semibold flex gap-10">
+      <a href="news.html" class="hover:underline">📢 انضموا إلينا في مبادرة تمكين المرأة 2025</a>
+      <a href="news.html" class="hover:underline">🎉 توقيع شراكة جديدة لدعم التدريب المجتمعي</a>
+      <a href="news.html" class="hover:underline">📰 إصدار تقرير أداء الجمعية للنصف الأول من العام</a>
+    </div>
   </div>
-  <header>
-    <h1>جمعية زائرات</h1>
-    <p>واجهة إعلامية تمثل رسالتنا المجتمعية</p>
+
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-6 shadow">
+    <h1 class="text-3xl font-bold">جمعية زائرات</h1>
+    <p class="text-lg mt-1">واجهة إعلامية تمثل رسالتنا المجتمعية</p>
   </header>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="goals.html">رسالتنا</a>
-    <a href="donate.html">التبرعات</a>
-    <a href="about.html">من نحن</a>
-    <a href="consultants.html">الاستشاريون</a>
-    <a href="contact.html">تواصل معنا</a>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow py-3 flex flex-wrap justify-center gap-4 text-primary font-semibold">
+    <a href="index.html" class="hover:text-accent transition">الرئيسية</a>
+    <a href="goals.html" class="hover:text-accent transition">رسالتنا</a>
+    <a href="donate.html" class="hover:text-accent transition">التبرعات</a>
+    <a href="about.html" class="hover:text-accent transition">من نحن</a>
+    <a href="consultants.html" class="hover:text-accent transition">الاستشاريون</a>
+    <a href="contact.html" class="hover:text-accent transition">تواصل معنا</a>
   </nav>
-  <main>
-    <section class="news-section">
-      <div class="news-card">
-        <img src="https://via.placeholder.com/400x200.png?text=خبر+1" alt="خبر 1">
-        <div class="news-card-content">
-          <h3>إطلاق مبادرة تمكين المرأة 2025</h3>
-          <p>مبادرة جديدة تدعم سيدات المجتمع عبر برامج تدريب وتأهيل.</p>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-10">
+
+    <!-- News Section -->
+    <section class="md:col-span-2 grid sm:grid-cols-2 gap-6">
+      <div class="bg-white rounded-lg shadow hover:shadow-md overflow-hidden transition">
+        <img src="https://via.placeholder.com/400x200.png?text=خبر+1" alt="خبر 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-primary text-lg font-bold mb-2">إطلاق مبادرة تمكين المرأة 2025</h3>
+          <p class="text-sm text-gray-700">مبادرة جديدة تدعم سيدات المجتمع عبر برامج تدريب وتأهيل.</p>
         </div>
       </div>
-      <div class="news-card">
-        <img src="https://via.placeholder.com/400x200.png?text=خبر+2" alt="خبر 2">
-        <div class="news-card-content">
-          <h3>تقرير أداء النصف الأول</h3>
-          <p>إصدار شامل يعرض إنجازات الجمعية في النصف الأول من العام.</p>
+
+      <div class="bg-white rounded-lg shadow hover:shadow-md overflow-hidden transition">
+        <img src="https://via.placeholder.com/400x200.png?text=خبر+2" alt="خبر 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-primary text-lg font-bold mb-2">تقرير أداء النصف الأول</h3>
+          <p class="text-sm text-gray-700">إصدار شامل يعرض إنجازات الجمعية في النصف الأول من العام.</p>
         </div>
       </div>
     </section>
-    <aside class="sidebar">
-      <h2>من نحن؟</h2>
-      <p>جمعية نسائية خيرية مرخصة تسعى إلى تمكين المرأة والمشاركة في التنمية المجتمعية بالشراكة مع القطاعات الحكومية والخاصة.</p>
-      <a class="cta" href="donate.html">ساهم معنا الآن</a>
+
+    <!-- Sidebar -->
+    <aside class="bg-white rounded-lg shadow p-6">
+      <h2 class="text-xl text-primary font-bold mb-4">من نحن؟</h2>
+      <p class="text-gray-700 text-sm leading-7">
+        جمعية نسائية خيرية مرخصة تسعى إلى تمكين المرأة والمشاركة في التنمية المجتمعية بالشراكة مع القطاعات الحكومية والخاصة.
+      </p>
+      <a href="donate.html" class="block text-center mt-6 bg-accent text-white font-semibold py-2 rounded hover:bg-orange-600 transition">
+        ساهم معنا الآن
+      </a>
     </aside>
   </main>
-  <footer>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-4 text-sm">
     <p>© جمعية زائرات 2025 - جميع الحقوق محفوظة</p>
   </footer>
+
 </body>
 </html>
