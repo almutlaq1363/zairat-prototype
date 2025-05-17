@@ -11,6 +11,31 @@
       background: #f4f3f9;
       color: #333;
     }
+    .ticker {
+      background: #f3eaff;
+      padding: 0.7rem 1rem;
+      color: #4a3271;
+      font-weight: bold;
+      overflow: hidden;
+      position: relative;
+    }
+    .ticker span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 18s linear infinite;
+    }
+    .ticker a {
+      color: #4a3271;
+      text-decoration: none;
+      margin-left: 2rem;
+    }
+    .ticker a:hover {
+      text-decoration: underline;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
     header {
       background: #4a3271;
       color: white;
@@ -23,24 +48,24 @@
     }
     nav {
       background: #e2d8f1;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
       padding: 1rem;
-      flex-wrap: wrap;
+      text-align: center;
     }
     nav a {
       text-decoration: none;
       color: #4a3271;
       font-weight: bold;
-      background: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      border: 1px solid #d2c3e6;
+      margin: 0 0.5rem;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+    nav a:not(:last-child)::after {
+      content: '|';
+      margin-right: 0.7rem;
+      color: #999;
     }
     nav a:hover {
-      background: #4a3271;
-      color: white;
+      color: #2d1b45;
+      border-bottom: 2px solid #4a3271;
     }
     main {
       display: grid;
@@ -104,28 +129,35 @@
       font-weight: bold;
     }
     footer {
-      background: #4a3271;
+      background: linear-gradient(to left, #4a3271, #3a285a);
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+      font-size: 0.9rem;
+      box-shadow: 0 -3px 6px rgba(0,0,0,0.05);
     }
   </style>
 </head>
 <body>
+  <div class="ticker">
+    <span>
+      <a href="news.html">📢 انضموا إلينا في مبادرة تمكين المرأة 2025</a>
+      <a href="news.html">🎉 توقيع شراكة جديدة لدعم التدريب المجتمعي</a>
+      <a href="news.html">📰 إصدار تقرير أداء الجمعية للنصف الأول من العام</a>
+    </span>
+  </div>
   <header>
     <h1>جمعية زائرات</h1>
     <p>واجهة إعلامية تمثل رسالتنا المجتمعية</p>
   </header>
- <nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="goals.html">رسالتنا</a>
-  <a href="donate.html">التبرعات</a>
-  <a href="about.html">من نحن</a>
-  <a href="consultants.html">الاستشاريون</a>
-  <a href="contact.html">تواصل معنا</a>
-</nav>
-
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="goals.html">رسالتنا</a>
+    <a href="donate.html">التبرعات</a>
+    <a href="about.html">من نحن</a>
+    <a href="consultants.html">الاستشاريون</a>
+    <a href="contact.html">تواصل معنا</a>
+  </nav>
   <main>
     <section class="news-section">
       <div class="news-card">
